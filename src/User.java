@@ -6,6 +6,7 @@ public class User {
     private String password;
     boolean isActive;
     double amountSpentMoney;
+    private char gender;
 
     public User () {
     }
@@ -37,6 +38,14 @@ public class User {
 
     public void setPassword(String password) {
             this.password = password.replaceAll("[^\\w]", "");
+    }
+
+    public void setGender(char gender) {
+        if (gender == 'F' || gender == 'M') {
+            this.gender = gender;
+        } else {
+            this.gender = 'U'; // U is unknown;
+        }
     }
 
     public void printTotalAmountOfSpentMoney(double amountSpentMoney) {
