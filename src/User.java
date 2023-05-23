@@ -56,4 +56,9 @@ public class User {
         System.out.println(this.amountSpentMoney);
     }
 
+    public void addDiscount(int percent) {
+        double discount = this.amountSpentMoney*(percent*0.01);
+        this.amountSpentMoney = this.amountSpentMoney - discount;
+    }
+
 }
